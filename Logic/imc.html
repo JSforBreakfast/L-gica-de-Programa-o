@@ -13,12 +13,13 @@ function escrever(frase){
 function calculaImc(peso, altura){
 
 let imc = peso/(altura*altura);
-escrever("O IMC calculado é " + Math.round(imc));
+return Math.round(imc);
+
 }
 
+let imcVitor = calculaImc(78, 1.87);
+let imcMari = calculaImc(83, 1.69);
 
-calculaImc(78, 1.87);
-
-calculaImc(83, 1.69);
-
+escrever(imcVitor);
+escrever(imcMari);
 </script>
