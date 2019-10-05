@@ -2,13 +2,23 @@
 
 <script>
 function pulaLinha(){
-  document.write("<br>");
-  document.write("<br>");
+  document.write("<br><br>");
 }
 
 function escrever(frase){
   document.write(frase);
   pulaLinha();
 }
+
+function calculaImc(peso, altura){
+
+let imc = peso/(altura*altura);
+escrever("O IMC calculado é " + Math.round(imc));
+}
+
+
+calculaImc(78, 1.87);
+
+calculaImc(83, 1.69);
 
 </script>
