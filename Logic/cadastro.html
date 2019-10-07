@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<script>
+
+    let loginCadastrado = "alura";
+    let senhaCadastrada = "alura321";
+
+    let tent = 1;
+
+    while(tent <= 3) {
+
+        let loginInformado = prompt("Informe seu login");
+        let senhaInformada = prompt("Informe sua senha");
+
+        if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+
+            alert("Bem-vindo ao sistema, " + loginInformado);
+
+            tent = tent + 2;
+
+        } else{
+             if (tent == 3) {
+                alert("Número de tentativas esgotado.");
+            } else {
+                alert("Tente novamente.");
+            }
+          }
+          tent += 1;
+        }
+
+</script>
