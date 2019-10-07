@@ -4,27 +4,33 @@
 
     let loginCadastrado = "alura";
     let senhaCadastrada = "alura321";
-
+    //sendo o número de tentaivas mínimo igual a 1
     let tent = 1;
 
+    //e enquanto o número total de tentativas for inferior ou igual a três
     while(tent <= 3) {
 
         let loginInformado = prompt("Informe seu login");
         let senhaInformada = prompt("Informe sua senha");
 
+        //se o login e senha cadastrados corresponderem ao login e senha informados
         if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
 
+            //apresente este alerta e adicione duas tentativas para o programa não solicitar mais login e senha
             alert("Bem-vindo ao sistema, " + loginInformado);
-
             tent = tent + 2;
 
-        } else{
+        } else {
+          //se houver erro no login e senha informados por três vezes seguidas
              if (tent == 3) {
+               //este alerta informando que o número de tentaivas foi esgotado aparecerá
                 alert("Número de tentativas esgotado.");
             } else {
+              //caso o número de tentaivas não tenha chegado a três, o alerta abaixo irá aparecer para tentarmos informar login e senha novamente
                 alert("Tente novamente.");
             }
           }
+          //a cada tentativa, será encrementada uma unidade à variável tent até o número máximo de três.
           tent += 1;
         }
 
