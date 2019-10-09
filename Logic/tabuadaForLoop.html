@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    let num = [1,2,3,4,5,6,7,8,9,10]
+
+
+    for (let multi = 1; multi <= 10; multi++){
+      for (let i = 0; i < num.length; i++){
+        mostra(multi + " X " +  num[i] + " = " + num[i] * multi);
+
+      }
+    }
+
+</script>
