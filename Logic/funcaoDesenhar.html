@@ -6,21 +6,27 @@ https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D -->
 
 <script>
 
-    function desenhaQuadradoRosa() {
+    function desenhaQuadrado(x, y, color) {
 
         var tela = document.querySelector("canvas");
         var pincel = tela.getContext("2d");
 
-        pincel.fillStyle = "pink";
-        pincel.fillRect(0, 0, 50, 50);
-        pincel.strokeStyle = "black";
-        pincel.strokeRect(0, 0, 50, 50);
+        pincel.fillStyle = color;
+        pincel.fillRect(x, y, 50, 50);
+        pincel.strokeStyle = "gray";
+        pincel.strokeRect(x, y, 50, 50);
 
 }
 
-desenhaQuadradoRosa();
-desenhaQuadradoRosa();
-desenhaQuadradoRosa();
+
+desenhaQuadrado(0, 0, "red");
+desenhaQuadrado(50, 50, "orange");
+desenhaQuadrado(100, 100, "blue");
+
+desenhaQuadrado(100, 0, "yellow");
+desenhaQuadrado(150, 50, "green");
+desenhaQuadrado(200, 100, "purple");
+
 
 </script>
 
